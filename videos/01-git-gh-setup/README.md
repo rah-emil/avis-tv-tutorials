@@ -8,7 +8,12 @@
 
 - **git** — программа на компьютере, хранит историю версий проекта.
 - **gh** — консольный клиент GitHub: логинит тебя и избавляет от паролей и токенов вручную.
-- Нужен аккаунт на [github.com](https://github.com/signup).
+- Нужен аккаунт на [github.com](https://github.com/signup). **Если его ещё нет — сначала создай**, это бесплатно.
+
+> [!TIP]
+> **Зачем ещё нужен gh — личный опыт.**
+> Однажды я потерял доступ к ключам двухфакторной защиты (2FA) в GitHub и не мог войти на сайт. Но `gh` был уже авторизован на компьютере — и через него я продолжил работать с репозиториями и PR, а потом через него же восстановил доступ к аккаунту.
+> Поэтому настрой `gh` заранее, пока вход в GitHub ещё работает. И сразу сохрани резервные коды 2FA: [Settings → Password and authentication](https://github.com/settings/security).
 
 ## Шаг 1. Установка
 
@@ -80,6 +85,7 @@ git config --global user.email "ты@example.com"
 git config --global init.defaultBranch main
 ```
 
+> Лучше указать **ту же почту, с которой регистрировался на GitHub** — тогда коммиты привяжутся к твоему аккаунту.
 > Не хочешь светить почту — возьми адрес вида `ID+логин@users.noreply.github.com` в [Settings → Emails](https://github.com/settings/emails).
 
 Проверка: `git config --global --list`
@@ -97,6 +103,8 @@ gh auth login
 3. В браузере открой `github.com/login/device`, вставь код, подтверди **Authorize**.
 
 Вопрос про Yes — важный: `gh` сам настроит git на вход в GitHub, пароли вводить не придётся.
+
+Входить нужно один раз: `gh` запоминает вход надолго (на Mac — в связке ключей), пока сам не выйдешь через `gh auth logout`.
 
 ## Шаг 4. Проверка
 
@@ -119,5 +127,11 @@ gh repo clone cli/cli -- --depth 1
 | `git: command not found` / `gh не распознано` | Закрой и снова открой терминал. На Windows — перезапусти PowerShell. |
 | macOS просит «Install command line developer tools» | Нажми **Install**, дождись окончания и повтори команду. |
 | Ubuntu: ошибка подписи `NO_PUBKEY` / `EXPKEYSIG` у `cli.github.com` | Повтори блок установки `gh` — он скачивает актуальный ключ. Подробности: [cli/cli#13118](https://github.com/cli/cli/issues/13118). |
-| `gh auth login` пишет, что код неверный | Код живёт ~15 минут: запусти `gh auth login` заново. |
+| Код на `github.com/login/device` не подходит | Одноразовый код действует недолго (~15 минут) — только пока идёт вход. Запусти `gh auth login` заново и получи новый. |
 | Выйти из GitHub | `gh auth logout` |
+
+## Дальше
+
+- [Алиасы git](git-aliases.md) — `git st`, `git ph`, `git co` и другие короткие команды
+- [Шпаргалка по git](git-cheatsheet.md) — основные команды в одну строку
+- [Шпаргалка по gh](gh-cheatsheet.md) — работа с PR и репозиториями из терминала
