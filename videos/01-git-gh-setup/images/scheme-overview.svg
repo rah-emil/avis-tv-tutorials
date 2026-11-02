@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <rect width="900" height="320" rx="16" fill="#f6f8fa"/>
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2328">Как всё связано</text>
+
+  <!-- Computer -->
+  <rect x="40" y="70" width="300" height="190" rx="14" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+  <text x="190" y="104" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2328">Твой компьютер</text>
+  <rect x="64" y="124" width="252" height="48" rx="10" fill="#ddf4ff" stroke="#54aeff"/>
+  <text x="190" y="146" text-anchor="middle" font-size="16" font-weight="700" fill="#0969da">git</text>
+  <text x="190" y="164" text-anchor="middle" font-size="13" fill="#1f2328">история версий проекта</text>
+  <rect x="64" y="186" width="252" height="48" rx="10" fill="#dafbe1" stroke="#4ac26b"/>
+  <text x="190" y="208" text-anchor="middle" font-size="16" font-weight="700" fill="#1a7f37">gh</text>
+  <text x="190" y="226" text-anchor="middle" font-size="13" fill="#1f2328">вход в GitHub из терминала</text>
+
+  <!-- GitHub -->
+  <rect x="560" y="70" width="300" height="190" rx="14" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+  <text x="710" y="104" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2328">GitHub (в интернете)</text>
+  <rect x="584" y="124" width="252" height="110" rx="10" fill="#fff8c5" stroke="#d4a72c"/>
+  <text x="710" y="164" text-anchor="middle" font-size="16" font-weight="700" fill="#7d4e00">Репозиторий</text>
+  <text x="710" y="188" text-anchor="middle" font-size="13" fill="#1f2328">копия проекта в облаке:</text>
+  <text x="710" y="206" text-anchor="middle" font-size="13" fill="#1f2328">хранение, доступ, совместная работа</text>
+
+  <!-- Arrows -->
+  <line x1="345" y1="150" x2="555" y2="150" stroke="#57606a" stroke-width="3" marker-end="url(#a)" marker-start="url(#a)"/>
+  <text x="450" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2328">push / pull</text>
+  <line x1="345" y1="212" x2="555" y2="212" stroke="#1a7f37" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#a)"/>
+  <text x="450" y="200" text-anchor="middle" font-size="14" font-weight="700" fill="#1a7f37">gh auth login</text>
+  <text x="450" y="236" text-anchor="middle" font-size="12" fill="#57606a">один раз — и GitHub «узнаёт» тебя</text>
+
+  <text x="450" y="296" text-anchor="middle" font-size="14" fill="#57606a">git — хранит версии  ·  gh — даёт доступ к GitHub  ·  GitHub — облако для проектов</text>
+</svg>
